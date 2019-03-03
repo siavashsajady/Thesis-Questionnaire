@@ -1,0 +1,97 @@
+
+<% include partials/header %> 
+    
+   
+ <!--Section : Signup-->
+ <section class="section section-signup">
+     <div class="container">
+       
+        <div class="row">
+          <h4 style="text-align: center">Sign in</h4>
+          <h5 style="text-align: center">to continue to ...</h5>
+        <div style="width: 40%; margin: 25px auto;">
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="firstName" placeholder="first name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="lastName" placeholder="last name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="email" name="email" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="password">
+                </div>
+                <div class="form-group">
+                    <a href="/consentform" class="btn btn-large blue-grey btn-extend">SIGN UP</a>
+                </div>
+            </form>
+            <br>
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+       
+       
+       
+       
+         <!--<div class="row">-->
+         <!--    <div class="col s12">-->
+         <!--       <div class="card-panel grey lighten-4 grey-text text-darken-4 z-depth-0">-->
+         <!--           <form>-->
+         <!--               <div class="input-field">-->
+         <!--                   <input type="text" id="first_name">-->
+         <!--                   <label for="first_name">First Name</label>-->
+         <!--               </div>-->
+         <!--                <div class="input-field">-->
+         <!--                   <input type="text" id="last_name">-->
+         <!--                   <label for="last_name">Last Name</label>-->
+         <!--               </div>-->
+         <!--                <div class="input-field">-->
+         <!--                   <input type="email" id="email">-->
+         <!--                   <label for="email">Email address</label>-->
+         <!--               </div>-->
+         <!--                <div class="input-field">-->
+         <!--                   <input type="text" id="company_name">-->
+         <!--                   <label for="company_name">Company name</label>-->
+         <!--               </div>-->
+         <!--                <div class="input-field">-->
+         <!--                   <input type="password" id="password">-->
+         <!--                   <label for="password">Password</label>-->
+         <!--               </div>-->
+         <!--               <div class="input-field">-->
+         <!--                   <select name="" id="role">-->
+         <!--                       <option disabled selected>Select Role</option>-->
+         <!--                       <option value = "professional">Security Manager</option>-->
+         <!--                       <option value = "student">Student</option>-->
+         <!--                       <option value = "hobbyist">Hobbyist</option>-->
+         <!--                       <option value = "other">Other</option>-->
+         <!--                   </select>-->
+         <!--                   <label for="role">Role</label>-->
+         <!--               </div>-->
+         <!--               <a href="consentform.html" class="btn btn-large blue-grey btn-extend">SIGN UP</a>-->
+         <!--           </form>-->
+         <!--       </div>-->
+         <!--    </div>-->
+         <!--</div>-->
+     </div>
+ </section>
+  
+
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      
+      $('.carousel.carousel-slider').carousel({fullWidth : true});
+      $('.button-collapse').sideNav();
+      $('.modal').modal();
+      $('select').material_select();
+
+    });
+  </script>
+</body>
+
+</html>

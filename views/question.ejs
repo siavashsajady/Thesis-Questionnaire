@@ -1,0 +1,42 @@
+ 
+ <% include partials/header %>
+ 
+ 
+ 
+ <h1>This is the Question Page!</h1>
+ 
+ <% anyname.forEach(function(answer){ %>
+   <li>
+    <%= answer.ques %> - <%= answer.answ %>
+   </li>
+ 
+ <% }); %>
+ 
+ 
+ <form action = "/question" method = "POST">
+  <p>Please introduce yourself and describe your education, employment background</p>
+  <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+   <input type="submit" value="SUBMIT">
+   <p>Please introduce yourself and describe your education, employment background</p>
+  <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+   <input type="submit" value="SUBMIT">
+   <p>Please introduce yourself and describe your education, employment background</p>
+  <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+   <input type="submit" value="SUBMIT">
+ </form>
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--<form action = "/question" name = "myform" method = "POST">-->
+ <!--                     <h5 class = " cyan-text accent-3 ">Section 1: Background</h5>-->
+ <!--                       <p>Please introduce yourself and describe your education, employment background</p>-->
+ <!--                       <div class="input-field">-->
+ <!--                           <i class="material-icons prefix">mode_edit</i>-->
+ <!--                           <textarea name = "q1" id="q1" class="materialize-textarea" data-length="500"></textarea>-->
+ <!--                             <label for="q1"></label>-->
+ <!--                       </div>-->
+ <!--                       <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey-->
+ <!--                       btn-extend">-->
