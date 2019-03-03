@@ -1,3 +1,14 @@
 <% include partials/header %>
+ 
+ 
+ 
+ <h1>This is the Answer Page!</h1>
+ 
+ 
+<% anyname.forEach(function(answer){ %>
+   <li>
+    <%= answer.ques %> - <%= answer.answ %>
+   </li>
+ 
+ <% }); %>
 
-<h1>this is the answer page</h1>
