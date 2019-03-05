@@ -2,35 +2,204 @@
  <% include partials/header %>
  
  
+  <header class="main-header-inner">
+    <nav class="transparent grey lighten-4">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" data-activates="mobile-nav" class="button-collapse">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="left hide-on-med-and-down">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
+          <ul class="right hide-on-med-and-down" >
+            <li>
+              <a href="#" class="btn blue-grey lighten-3">Sign out</a>
+            </li>
+          </ul>
+            
+          <ul class="side-nav" id="mobile-nav">
+            <h4 class="purple-text text-darken-4 center">Project Name</h4>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a href="index.html">
+                <i class="fa fa-home grey-text text-darken-4"></i> Home</a>
+            </li>
+            <li>
+              <a href="abouts.html">
+                <i class="fa fa-cog grey-text text-darken-4"></i> About</a>
+            </li>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a href="#" class="btn purple">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+    
+     <section class="section section-about grey lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h3>Please Ansewr These Question</h3>
+          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dolores!</h5>
+      </div>
+    </div>
+  </section>
+    
+    
+    
  
- <h1>This is the Question Page!</h1>
+ <!--Section : Qestion-->
  
+ <section class="section section-question">
+     <div class="container">
+         <div class="row"> 
+             <div class="col s12">
+                <div class="card-panel grey lighten-4 grey-text text-darken-4 z-depth-0">
+                    <form   action = "/question" method = "POST"  name = "myform">
+                      <h5 class = " cyan-text accent-3 ">Section 1: Background</h5>
+                        <p name = "answ">Please introduce yourself and describe your education, employment background</p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                        <br><br>
+                        <h5 class = " cyan-text accent-3 ">Section 2: Question on Model</h5>
+                        <p class = "flow-text deep-purple-text accent-2">a. Threat Intelligence</p>
+                        <p>1- What are the desired features for a Threat intelligence model?</p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                         <br><br>
+                         <p>2- What would be the requirements for the use of internal and external TI?</p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                         <br><br>
+                        <p>3- What would be the requirements to use Technical, Strategic, and operational threat intelligence?</p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                         <br><br>
+                        <p>4- How frequently the threat data feed will be updated?</p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                        <br><br>
+                        <p class = "flow-text deep-purple-text accent-2">b. Botnet detection and prevention system</p>
+                        <p>1- What are the Challenges and issues faced by the Network security expert in terms of botnet attacks and their detection?</p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                         <br><br>
+                         <p>2- When designing a conceptual model with threat intelligence capabilities, how requirements shall be taken into account and what requirements need to be prioritized? </p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                         <br><br>
+                         <p>3- IDS systems use different techniques to detect botnet threats e.g. Anomaly based, Signature based, DNS based and Data mining, which techniques shall be taken into account for the conceptual design with integrated threat intelligence capabilities? </p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                         <br><br>
+                         <p>4- Which information do you think is more useful to detect host-based botnet threats for eg, file systems, network events, log files, system calls? </p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                         <br><br>
+                         <p>5- Which modelling language and software you suggest to be used in designing the intelligent model? </p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                         <br><br>
+                         <p class = "flow-text deep-purple-text accent-2">c. Machine learning</p>
+                        <p>1- Are you familiar with machine learning algorithms for signature based or anomaly-based detection system?
+                        <li>If yes, can you name some and specify which one is the best and relevant to host-based IDPS in your opinion?</li>
+                        <li>If not, we would like to present Random forest and Support vector machine algorithm based on research papers which proved to have best features, to detect the threats with high accuracy results and low false positives.</li>
+                        </p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                          <br><br>
+                         <p>2- For our conceptual model, do you think these are practically appropriate or not? Do you have any other suggestions? </p>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
+                        </div>
+                        <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey
+                        btn-extend">
+                    </form>
+                </div>
+                <p><a href = "/answer" class = "btn  blue-grey white-text right"> View Answer</a></p>
 
- 
- <form action = "/question" method = "POST">
-  <p>Please introduce yourself and describe your education, employment background</p>
-  <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
-   <input type="submit" value="SUBMIT">
-   <p>Please introduce yourself and describe your education, employment background</p>
-  <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
-   <input type="submit" value="SUBMIT">
-   <p>Please introduce yourself and describe your education, employment background</p>
-  <textarea name = "answ"  class="materialize-textarea" data-length="500"></textarea>
-   <input type="submit" value="SUBMIT">
- </form>
+             </div>
+         </div>
+     </div>
+ </section>
  
  
  
  
  
  
- <!--<form action = "/question" name = "myform" method = "POST">-->
- <!--                     <h5 class = " cyan-text accent-3 ">Section 1: Background</h5>-->
- <!--                       <p>Please introduce yourself and describe your education, employment background</p>-->
- <!--                       <div class="input-field">-->
- <!--                           <i class="material-icons prefix">mode_edit</i>-->
- <!--                           <textarea name = "q1" id="q1" class="materialize-textarea" data-length="500"></textarea>-->
- <!--                             <label for="q1"></label>-->
- <!--                       </div>-->
- <!--                       <input type="submit" value="SUBMIT" class = "btn btn-small blue-grey-->
- <!--                       btn-extend">-->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <% include partials/footer %>
+ 
+ 
