@@ -26,6 +26,13 @@ blockquote{
 }
 
 
+#tab1 p {
+    
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+
 .footer-copyright {
     color :transparent;
      text-shadow: none;
@@ -54,7 +61,7 @@ blockquote{
 
 .btn-extend {
     display : block;
-    /*width: 50%;*/
+    width: 100%;
 }
 
 

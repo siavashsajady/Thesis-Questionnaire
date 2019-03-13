@@ -1,46 +1,41 @@
 <% include partials/header %>
 
 
+
+
   <!-- Header -->
   <header class="main-header">
     <nav class="transparent grey lighten-4">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Project Name</a>
+          <a href="#" class="brand-logo">Thesis Questionnaire</a>
           <a href="#" data-activates="mobile-nav" class="button-collapse">
             <i class="fa fa-bars"></i>
           </a>
           <ul class="right hide-on-med-and-down">
-            <li>
-              <a class="active-link" href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
+           <% if(!currentUser){ %>
             <li>
               <a href="/register" class="btn blue-grey lighten-3">Sign Up</a>
             </li>
             <li>
-              <a href="#">Login</a>
+              <a href="/login">Login</a>
+            </li>
+           <% } else { %>
+            <li>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href="https://linkedin.com">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
+              <a href="/consentform">Consent Form</a>
             </li>
             <li>
-              <a href="https://twitter.com">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
+              <a href = "#!" class = "blue-text">Signed In As <span class = "purple-text accent-3"><%= currentUser.username %></span></a></li>
             <li>
-              <a href="https://instagram.com">
-                <i class="fab fa-instagram"></i>
-              </a>
+              <a href="/logout" class="btn blue-grey lighten-3">Logout</a>
             </li>
+           <% } %>
           </ul>
           <ul class="side-nav" id="mobile-nav">
-            <h4 class="purple-text text-darken-4 center">Project Name</h4>
+            <h4 class="purple-text text-darken-4 center">Thesis Questionnaire</h4>
             <li>
               <div class="divider"></div>
             </li>
@@ -60,7 +55,10 @@
               <div class="divider"></div>
             </li>
             <li>
-              <a href="#" class="btn purple">Login</a>
+              <a href="/login" class="btn blue-grey">Login</a>
+            </li>
+            <li>
+              <a href="/logout" class="btn blue-grey">Logout</a>
             </li>
           </ul>
         </div>
@@ -70,9 +68,9 @@
     <div class="showcase container">
       <div class="row">
         <div class="col s12 m10 offset-m1 center">
-          <h5>Welcome To My Project Questionnarias</h5>
-          <h1>Please Do Something </h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit fugit deserunt quos provident aliquam inventore.</p>
+          <h5>Welcome To Our Project Questionnar</h5>
+          <h1>Please Sign Up </h1>
+          <p>To answer the questions</p>
           <br>
           <br>
           <a href="/register" class="btn btn-large blue-grey white-text">Sign Up</a>

@@ -1,14 +1,52 @@
 <% include partials/header %>
+
+
+  <!-- Header -->
+  <header class="main-header">
+    <nav class="transparent grey lighten-4">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">Thesis Questionnaire</a>
+          <a href="#" data-activates="mobile-nav" class="button-collapse">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+           <% if(!currentUser){ %>
+            <li>
+              <a href="/login">Login</a>
+            </li>
+           <% } else { %>
+            <li>
+              <a href = "#!" class = "blue-text">Signed In As <span class = "purple-text accent-3"><%= currentUser.username %></span></a></li>
+            <li>
+              <a href="/logout" class="btn blue-grey lighten-3">Logout</a>
+            </li>
+           <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   
+    
+    
+    
+     <section class="section section-about grey lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h1>This is the Answer Page!</h1>
+         <% anyname.forEach(function(answer){ %>
+            <li>
+             <%= answer.ques %> - <%= answer.answ %>
+            </li>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </section>
+    
  
  
  
- <h1>This is the Answer Page!</h1>
- 
- 
-<% anyname.forEach(function(answer){ %>
-   <li>
-    <%= answer.ques %> - <%= answer.answ %>
-   </li>
- 
- <% }); %>
+
 

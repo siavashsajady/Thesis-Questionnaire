@@ -5,41 +5,34 @@
     <nav class="transparent grey lighten-4">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Project Name</a>
+          <a href="/" class="brand-logo">Thesis Questionnaire</a>
           <a href="#" data-activates="mobile-nav" class="button-collapse">
             <i class="fa fa-bars"></i>
           </a>
           <ul class="right hide-on-med-and-down">
+           <% if(!currentUser){ %>
             <li>
-              <a class="active-link" href="/">Home</a>
+              <a href="/register" class="btn blue-grey lighten-3">Sign Up</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="/login">Login</a>
+            </li>
+           <% } else { %>
+            <li>
+              <a href="#!" class = "active-link">About</a>
             </li>
             <li>
-              <a href="/signup" class="btn blue-grey lighten-3">Sign Up</a>
+              <a href="/consentform">Consent Form</a>
             </li>
             <li>
-              <a href="#">Login</a>
-            </li>
+              <a href = "#!" class = "blue-text">Signed In As <span class = "purple-text accent-3"><%= currentUser.username %></span></a></li>
             <li>
-              <a href="https://linkedin.com">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
+              <a href="/logout" class="btn blue-grey lighten-3">Logout</a>
             </li>
-            <li>
-              <a href="https://twitter.com">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
+           <% } %>
           </ul>
           <ul class="side-nav" id="mobile-nav">
-            <h4 class="purple-text text-darken-4 center">Project Name</h4>
+            <h4 class="purple-text text-darken-4 center">Thesis Questionnaire</h4>
             <li>
               <div class="divider"></div>
             </li>
@@ -52,14 +45,17 @@
                 <i class="fa fa-cog grey-text text-darken-4"></i> About</a>
             </li>
             <li>
-              <a href="/signup">
+              <a href="/register">
                 <i class="fa fa-users grey-text text-darken-4"></i> Sign Up</a>
             </li>
             <li>
               <div class="divider"></div>
             </li>
             <li>
-              <a href="#" class="btn purple">Login</a>
+              <a href="/login" class="btn blue-grey">Login</a>
+            </li>
+            <li>
+              <a href="/logout" class="btn blue-grey">Logout</a>
             </li>
           </ul>
         </div>
@@ -72,29 +68,23 @@
       <div class="container">
           <div class="row">
               <div class="col s12 m5">
-                <h2>What We Do ...</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis provident magni ipsum, a tempora nesciunt impedit, dicta excepturi veniam ab obcaecati nemo laudantium, ut mollitia odit voluptatem nam exercitationem praesentium at quibusdam, consequatur voluptates! Vitae suscipit, sunt esse inventore, adipisci beatae. Aut doloribus iure, repudiandae nam temporibus aliquid libero ullam. Repudiandae odit excepturi, dolor aliquam perspiciatis consequatur distinctio, reiciendis quaerat molestiae. Consectetur vero magni, qui? In, repudiandae modi omnis assumenda facere pariatur sed saepe sapiente, eligendi commodi libero aut molestias quas eos mollitia ad vitae placeat doloremque minima iure. Eaque explicabo sequi aspernatur expedita ratione! Deserunt veritatis ratione est vel?</p>
+                <div style = "height: 400px" class = "valign-wrapper">
+                  <h4 class = "blue-grey-text">
+                    Conceptual Model of Intrusion detection and Prevention System
+                  </h4>
+                </div>
               </div>
               <div class="col s12 m6 offset-m1">
                   <div class="row">
                     <div class="col s12">
-                      <ul class="tabs">
-                        <li class="tab col s4 "><a class = "blue-grey-text" href="#tab1">The First Part Of Research</a></li>
-                        <li class="tab col s4"><a class = "blue-grey-text" href="#tab2">The Second Part Of Research</a></li>
-                        <li class="tab col s4"><a class = "blue-grey-text" href="#tab3">The Third Part Of Research</a></li>
-                      </ul>
+                      
                     </div>
                     <div id="tab1" class="col s12">
-                        <h5>The First Part Of Research</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi sed, iusto aut! Nemo tempora officia beatae qui modi, mollitia culpa. Dolor nam expedita nobis recusandae modi aperiam consequuntur, laudantium in repellendus tempora neque consequatur perferendis, facilis porro aliquam dolorum. Adipisci ipsa illo deleniti totam, ipsam quasi tempore! Iste impedit, non tenetur id cupiditate eveniet aut, hic delectus, voluptas accusamus architecto possimus dignissimos quis commodi quas optio repellendus expedita! Atque nam officia ea nesciunt iure modi magnam laboriosam, rerum, aliquam reiciendis sed itaque earum aut veniam possimus ad doloremque deleniti inventore sequi architecto fuga voluptatem assumenda repellat? Ipsam iusto similique, commodi quibusdam provident, inventore numquam quos laudantium saepe assumenda dicta.</p>
-                    </div>
-                    <div id="tab2" class="col s12">
-                        <h5>The Second Part Of Research</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi possimus ratione quae, quos dolorum, alias sed impedit sequi, optio error ipsum. Quod a ducimus tenetur, id aspernatur voluptate quasi quaerat quibusdam hic aliquam. Eius nisi ullam labore quae quis itaque doloribus inventore ducimus omnis odio nesciunt voluptate accusantium, sequi iusto molestias ut possimus delectus error esse tempora molestiae. Architecto odit accusantium sit, consectetur explicabo dicta voluptate enim accusamus fuga eos. Sapiente quae nesciunt excepturi asperiores eum at amet ipsam quis est ipsum labore illo sunt qui, quidem cupiditate cum in aliquid blanditiis tempore adipisci laboriosam. Vero, voluptatibus ipsa ratione earum doloremque. Provident voluptate accusantium voluptatibus minus quae deleniti rem debitis sit perferendis saepe, dolores iusto, repudiandae dolorem ab temporibus consequatur!</p>
-                    </div>
-                    <div id="tab3" class="col s12">
-                        <h5>The Third Part Of Research</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque libero, debitis placeat corporis delectus, eveniet, quasi accusamus tenetur quia assumenda praesentium pariatur veritatis quae tempora. Nesciunt, magni. Omnis, quis ipsum. Neque nam vero facere molestiae sed? Ex, corporis ea aliquam. Quae numquam veniam cupiditate unde reprehenderit nihil fugit voluptatibus facilis dolorem maxime sed enim, nam consequuntur et id incidunt praesentium, aliquam nobis! Cupiditate earum repellendus commodi consequatur omnis praesentium itaque nobis, harum et facilis tempora, eveniet laboriosam voluptatibus iure aliquam repellat aperiam cum aut, voluptatem adipisci nihil. In sequi nam impedit, reprehenderit officiis hic, at eaque quas ipsa pariatur fugit ipsam, sunt sint! Doloremque culpa corporis, facere cum ratione eum deserunt nesciunt porro aliquam, esse perferendis unde neque, repellendus veniam! Aut nihil modi, neque fuga eos voluptatibus, rem ipsam libero veniam doloremque voluptatum quibusdam eaque iure, rerum vel vero perferendis!</p>
+                        <p>The thesis aims to design a conceptual model of Intrusion detection and prevention system with integration of threat intelligence capabilities. The IDPS detects the host-based threats -the botnet. Presently, the cybercrime rate and malicious activities on cyberinfrastructure are increasing adversely, which motivate the security community towards the researching mechanisms that can mitigate these threats. So, the conceptual model of IDPS with threat intelligence capabilities has been proposed which helps the organisations to detect and prevent these threats from cybercriminals.</p>
+                        <p>
+                          Intelligence Intrusion detection systems refer to any technology or strategy that allows us to detect the attempted compromise of system and information, and preserve the CIA of the information and infrastructures. Hence, to develop the artefact, some basic requirements and fundamental concepts were extracted from academic publications. Further, researchers have realised that the security experts’ knowledge and opinions would be vital for more feasibility and practicability of the conceptual model. The artefact has different components such as design, collection and processing, analysing input data (signature detection mechanism, anomaly detection mechanism) that is based on the threat intelligence lifecycle as seen in the attached design model. Once the threat is detected, it will be mitigated by the Security team. Further, the security team will make a report based on the identified threats, and an alert is also sent to the customer. A questionnaire is designed to gather further requirements from the experts to develop complete artefact of IDPS.
+                        </p>
+
                     </div>
                   </div>
               </div>
@@ -103,7 +93,22 @@
   </section>
   
   
-  
+  <!-- Chart -->
+  <section class="section section-chart scrollspy">
+   <div class="container">
+     <h4 class="center">
+              <span class="teal-text">Intrusion Detection & Prevention System</span> 
+          </h4>
+     <div class="row">
+       <div class="col s12">
+          <img src="/img/Intelligence.jpg" class = "materialboxed responsive-img" width = "80%" 
+        data-caption = "This is my awesome photo">
+       </div>
+     </div>
+   </div>
+  </section>
+    
+
 
 
 <% include partials/footer %>
