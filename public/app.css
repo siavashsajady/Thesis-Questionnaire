@@ -66,9 +66,16 @@ p {
 
 
 
+
+
+/*********************
+  Media Query Classes
+**********************/
+
 @media(max-width: 500px){
-    .section-developers,
-    .section-podcast {
+    .section-showcase
+    {
         min-height: 240px;
     }
 }
+
