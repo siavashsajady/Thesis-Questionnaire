@@ -8,7 +8,7 @@ var express         = require("express"),
     bodyParser      = require("body-parser");
 
 
-var url = process.env.DATABASEURL || 'mongodb://localhost:27017/sami-pro-v8';
+var url = process.env.DATABASEURL ||  'mongodb://localhost:27017/sami-pro-v8'
 mongoose.connect(url);
 
 mongoose.set('useCreateIndex', true);
