@@ -31,11 +31,14 @@
             </li>
            <% } %>
           </ul>
+                 <!-- Side Nav-->
+          
           <ul class="side-nav" id="mobile-nav">
             <h4 class="purple-text text-darken-4 center">Thesis Questionnaire</h4>
             <li>
               <div class="divider"></div>
             </li>
+             <% if(currentUser){ %>
             <li>
               <a href="/">
                 <i class="fa fa-home grey-text text-darken-4"></i> Home</a>
@@ -45,9 +48,21 @@
                 <i class="fa fa-cog grey-text text-darken-4"></i> About</a>
             </li>
             <li>
+              <a href="/consentform">Consent Form</a>
+            </li>
+            <li>
+              <a href="/logout" class="btn blue-grey lighten-3">Logout</a>
+            </li>
+            <% } else { %>
+            <li>
+              <a href="/login">
+                <i class="fa fa-users grey-text text-darken-4"></i> Login</a>
+            </li>
+            <li>
               <a href="/register">
                 <i class="fa fa-users grey-text text-darken-4"></i> Sign Up</a>
             </li>
+            <% } %>
           </ul>
         </div>
       </div>
