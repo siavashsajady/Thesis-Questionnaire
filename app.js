@@ -8,7 +8,10 @@ var express         = require("express"),
     bodyParser      = require("body-parser");
 
 
-mongoose.connect(process.env.DATABASEURL);
+var url = process.env.DATABASEURL || 'mongodb://localhost:27017/sami-pro-v8';
+mongoose.connect(url);
+
+mongoose.set('useCreateIndex', true);
 // mongoose.connect("mongodb+srv://hubgitpro:77072638@samirathesis-p2uau.mongodb.net/test?retryWrites=true");
 // mongoose.connect('mongodb://localhost:27017/sami-pro-v8', { useNewUrlParser: true });
 app.use(express.static(__dirname + "/public"));
