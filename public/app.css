@@ -25,13 +25,13 @@ blockquote{
   border-left: 5px solid #64b5f6; /* Just change the color value and that's it*/
 }
 
-
-#tab1 p {
-    
-  text-align: justify;
+p {
+   text-align: justify;
   text-justify: inter-word;
+}  
 
-}
+
+
 
 .footer-copyright {
     color :transparent;
