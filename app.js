@@ -8,12 +8,11 @@ var express         = require("express"),
     bodyParser      = require("body-parser");
 
 
-var url = process.env.DATABASEURL ||  'mongodb://localhost:27017/sami-pro-v8'
+var url = process.env.DATABASEURL;
 mongoose.connect(url);
 
 mongoose.set('useCreateIndex', true);
-// mongoose.connect("mongodb+srv://hubgitpro:77072638@samirathesis-p2uau.mongodb.net/test?retryWrites=true");
-// mongoose.connect('mongodb://localhost:27017/sami-pro-v8', { useNewUrlParser: true });
+
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended : true}));
 app.set("view engine", "ejs");
@@ -157,33 +156,9 @@ app.post("/question",isLoggedIn, function(req,res){
   });
 });
 
-//Show - Shows the answer about one person 
-
-
-// app.get("/question/:id", function(req, res) {
-//     // find the answer with provided ID
-//     Project.findById(req.params.id, function(err,foundAnswer){
-//       if(err){
-//           console.log(err);
-//       } else {
-//           // Render show template with that questions
-//             res.render("show", {question :foundAnswer});
-//       }
-//     });
-// });
 
 
 
-app.get("/answer", isLoggedIn,function(req,res){
-  // get all ques and answ from DB
-    Project.find({}, function(err,allanswers){
-        if(err){
-            console.log(err);
-        } else {
-             res.render("answer", {anyname : allanswers});
-        }
-    });
-});
 
 
 function isLoggedIn(req,res,next){
